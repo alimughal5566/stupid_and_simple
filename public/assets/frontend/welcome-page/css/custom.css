@@ -1,0 +1,459 @@
+
+
+/* @import must be at top of file, otherwise CSS will not work */
+@import url("//hello.my../fonts.net/count/396286");
+
+@font-face {font-family: 'URWDIN-Medium';src: url('../fonts/396286_0_0.eot');src: url('../fonts/396286_0_0.eot?#iefix') format('embedded-opentype'),url('../fonts/396286_0_0.woff2') format('woff2'),url('../fonts/396286_0_0.woff') format('woff'),url('../fonts/396286_0_0.ttf') format('truetype');}
+ 
+  
+@font-face {font-family: 'URWDIN-Regular';src: url('../fonts/396286_1_0.eot');src: url('../fonts/396286_1_0.eot?#iefix') format('embedded-opentype'),url('../fonts/396286_1_0.woff2') format('woff2'),url('../fonts/396286_1_0.woff') format('woff'),url('../fonts/396286_1_0.ttf') format('truetype');}
+ 
+  
+@font-face {font-family: 'URWDIN-XLight';src: url('../fonts/396286_2_0.eot');src: url('../fonts/396286_2_0.eot?#iefix') format('embedded-opentype'),url('../fonts/396286_2_0.woff2') format('woff2'),url('../fonts/396286_2_0.woff') format('woff'),url('../fonts/396286_2_0.ttf') format('truetype');}
+ 
+  
+@font-face {font-family: 'URWDIN-Bold';src: url('../fonts/396286_3_0.eot');src: url('../fonts/396286_3_0.eot?#iefix') format('embedded-opentype'),url('../fonts/396286_3_0.woff2') format('woff2'),url('../fonts/396286_3_0.woff') format('woff'),url('../fonts/396286_3_0.ttf') format('truetype');}
+ 
+
+html {
+    height: 100%;
+}
+body {
+    background: #fddd2d;
+    font-family: 'URWDIN-Regular';
+    font-size: 22px;
+    color: #000000;
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+    height: 100%;
+    line-height: 30px;
+}
+.container-fluid {
+    height: 100%;
+}
+ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+p , ul {
+    font-family: 'URWDIN-Regular';
+    font-size: 22px;
+    color: #000000;
+}
+.btn {
+    font-family: 'URWDIN-Regular';
+    font-size: 18px;
+}
+h1 {
+    font-family: 'URWDIN-XLight';
+    color: #000000;
+}
+h1 {
+    font-size: 63px;
+}
+h2 {
+    font-size: 45px;
+    font-family: 'URWDIN-Regular';
+    margin-bottom: 15px;
+}
+a {
+    color: #8600C1;
+}
+a:hover {
+    color: #8600C1;
+    text-decoration: underline;
+}
+.inner-wrap {
+    max-width: 600px;
+    margin: auto;
+    height: 100%;
+}
+.footer {
+    background: #000000;
+    color: #fff;
+    padding: 15px 0;
+    font-size: 14px;
+}
+.footer-list ul{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+.footer-list ul li a {
+    color: #fff;
+    padding-right: 10px;
+    border-right: 1px solid #fff;
+    padding-left: 10px;
+    font-size: 14px;
+}
+.footer-list ul li:last-child  a{
+    border-right: 0;
+}
+.btn-pro {
+    background-color: #8600C1;
+    color: #fff;
+    height: 49px;
+    width: 245px;
+    border-radius: 12px;
+    max-width: 100%;
+}
+.wrap-main {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+.title-head::after {
+    position: absolute;
+    content: "";
+    left: 0;
+    right: 0;
+    width: 37px;
+    height: 11px;
+    background-color: #000;
+    bottom: 0;
+    margin: auto;
+}
+.title-head {
+    position: relative;
+    margin-bottom: 50px;
+    padding-bottom: 30px;
+    margin-top: 70px;
+    font-weight: bold;
+}
+.profile-preview {
+    position: relative;
+    top: -110px;
+    margin-bottom: -100px;
+    width: 100%;
+}
+.profile-preview-pic {
+    border: 4px solid #fff;
+    border-radius: 50%;
+    width: 117px;
+    margin: auto;
+    height: 117px;
+    margin-bottom: 35px;
+}
+
+/* The xd-radio */
+.xd-radio {
+    display: block;
+    position: relative;
+    padding-left: 5px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    float: left;
+    margin-top: 5px;
+}
+  
+  /* Hide the browser's default radio button */
+  .xd-radio input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+  }
+  
+  /* Create a custom radio button */
+  .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    background-color: #fff;
+    border-radius: 50%;
+    border: 1px solid #000;
+ }
+  
+  /* On mouse-over, add a grey background color */
+  .xd-radio:hover input ~ .checkmark {
+    background-color: #ccc;
+  }
+  
+  /* When the radio button is checked, add a blue background */
+  .xd-radio input:checked ~ .checkmark {
+    background-color: transparent;
+  }
+  
+  /* Create the indicator (the dot/circle - hidden when not checked) */
+  .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  
+  /* Show the indicator (dot/circle) when checked */
+  .xd-radio input:checked ~ .checkmark:after {
+    display: block;
+  }
+  
+  /* Style the indicator (dot/circle) */
+    .xd-radio .checkmark:after {
+        top: 3px;
+        left: 3px;
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        background: white;
+    }
+
+.process-checkin {
+    margin-bottom: 50px;
+}
+.process-checkin ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+.process-checkin ul li a {
+    background: #fff;
+    color: #333;
+    border-radius: 50%;
+    padding: 10px 10px 8px;
+    font-size: 22px;
+    width: 48px;
+    height: 48px;
+    display: block;
+    margin: 0 11px;
+    text-decoration: none;
+}
+.process-checkin ul li.active {
+    padding: 5px;
+    border: 2px solid #000;
+    border-radius: 50%;
+    width: 62px;
+    height: 62px;
+    margin: 0 5px;
+}
+
+.process-checking-completed {
+    margin-bottom: 50px;
+}
+.process-checking-completed ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+.process-checking-completed ul li a {
+    background: #fff;
+    color: #333;
+    border-radius: 50%;
+    padding: 42px 30px;
+    display: block;
+    margin: 0 11px;
+    text-decoration: none;
+    font-size: 46px;
+    width: 128px;
+    height: 128px;
+}
+.process-checkin ul li.active a {
+    margin: 0;
+}
+.btn.focus, .btn:focus {
+    box-shadow: none;
+}
+.chose01model .modal-body {
+    padding: 0rem 2rem 2.6rem 2rem;
+}
+.chose01model .modal-dialog {
+    max-width: 600px;
+    margin: 5rem auto;
+}
+.chose01model .modal-content {
+    border-radius: .8rem;
+}
+.chose01model .modal-header {
+    padding: 1rem 1rem 0;
+    border-bottom: 0;
+}
+.chose01model .close {
+    font-size: 2.5rem;
+    color: #000;
+    text-shadow: none;
+    opacity: 1;
+}
+
+.form-control {
+    padding: .375rem 1.2rem;
+    font-size: 22px;
+    line-height: 1.5;
+    color: #000000;
+    border: 1px solid transparent;
+    border-radius: 13px;
+    margin-bottom: 32px;
+    height: 60px;
+    padding-top: 10px;
+}
+select.form-control:not([size]):not([multiple]) {
+    height: 60px;
+}
+.form-control:focus {
+    color: #000000;
+    background-color: #fff;
+    border-color: #fff;
+    outline: 0;
+    box-shadow: none;
+}
+::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    color:    #000000;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+   color:    #000000;
+   opacity:  1;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+   color:    #000000;
+   opacity:  1;
+}
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+   color:    #000000;
+}
+::-ms-input-placeholder { /* Microsoft Edge */
+   color:    #000000;
+}
+
+::placeholder { /* Most modern browsers support this now. */
+   color:    #000000;
+}
+.small-container {
+    max-width: 360px;
+    margin: 0 auto;
+}
+.wrap-inner-bottom {
+    background-color: #f6d72e;
+    padding: 65px 20px 45px;
+    margin-top: 100px;
+}
+.mb-80 {
+    margin-bottom: 80px;
+}
+.wrap-inner-bottom.profile-case-wrap {
+    margin-top: 138px;
+}
+.newsletter-check{
+    text-align: left;
+    padding-left: 35px;
+    position: relative;
+}
+.newsletter-check label.xd-radio {
+    position: absolute;
+    left: 0;
+}
+.small-font {
+    font-size: 14px;
+    line-height: 19px;
+}
+.company-field {
+    background-color: #fff;
+    height: 60px;
+    width: 360px;
+    border-radius: 13px;
+    margin: 45px auto 70px;
+    line-height: 60px;
+}
+.table.data-check-table th,
+.table.data-check-table td {
+    border: 0;
+}
+
+.social-icons a{
+    background: #000;
+    color: #fddd2d;
+    width: 47px;
+    height: 47px;
+    border-radius: 50px;
+    font-size: 25px;
+    padding: 8px 0;
+    margin: 40px auto 0;
+    display: block;
+}
+
+.upload-btn-wrapper {
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+    background-color: #fff;
+    border-radius: 13px;
+    padding: 14px;
+    height: 110px;
+    margin: 30px 0 20px;
+    width: 100%;
+}
+.btn-upload {
+    border: 4px dotted #000;
+    color: #000;
+    background-color: white;
+    padding: 8px 20px;
+    border-radius: 13px;
+    width: 100%;
+    height: 80px;
+    cursor: pointer;
+}
+.upload-btn-wrapper input[type=file] {
+    font-size: 100px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+}
+.chose01model .modal-title {
+    margin-bottom: 10px;
+}
+.pl-md-6 {
+    padding-left: 3.7rem!important;
+}
+.pl-md-7 {
+    padding-left: 4rem!important;
+}
+.social-icons .fa {
+    padding-top: 3px;
+}
+
+@media only screen and (max-width: 767px) {
+    .footer-list {
+        text-align: center;
+    }
+    .footer-list li {
+        display: inline-block;
+    }
+    .process-checkin ul li a {
+        padding: 5px 6px;
+        font-size: 16px;
+        width: 36px;
+        height: 36px;
+        margin: 0 2px;
+    }
+    .process-checkin ul li.active {
+        width: 49px;
+        height: 49px;
+    }
+    .form-control {
+        font-size: 18px;
+        margin-bottom: 20px;
+        height: 50px;
+    }
+    h1 {
+        font-size: 50px;
+    }
+    h2 {
+        font-size: 40px;
+    }
+    p, ul {
+        font-size: 18px;
+    }
+    .company-field {
+        width: 100%;
+    }
+    select.form-control:not([size]):not([multiple]) {
+        height: 50px;
+    }
+    .chose01model .modal-dialog {
+        max-width: 90%;
+    }
+}
