@@ -11,7 +11,7 @@
 |
 */
 
-    Route::group(['Karyana'],function () {
+    Route::group(['stupid-and-simple'],function () {
 
         Route::get('/', function () {return view('welcome');});
 
@@ -24,6 +24,8 @@
 
         Route::group(['Public'],function () {
 
+
+            Route::post('login', 'Auth\LoginController@login')->name('login');
 
                 Route::group(['FrontendController'],function () {
 
@@ -39,6 +41,7 @@
         Route::group(['Private'],function () {
 
 
+            Route::group(['middleware'=>'auth'],function (){
 
                     Route::group(['AdmindashController'],function () {
 
@@ -47,6 +50,7 @@
                     });
 
 
+            });
         });
 
 
