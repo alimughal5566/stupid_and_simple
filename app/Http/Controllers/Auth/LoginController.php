@@ -4,7 +4,11 @@ namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
 use App\Providers\RouteServiceProvider;
+use App\User;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Hash;
 
 class LoginController extends Controller
 {
@@ -27,7 +31,27 @@ class LoginController extends Controller
      * @var string
      */
 //    protected $redirectTo = RouteServiceProvider::HOME;
-    protected $redirectTo ='/admin-dash';
+//    protected $redirectTo ='/admin-dash';
+    protected function redirectTo(){
+        return redirect()->route('admindash');
+    }
+
+
+    public function login(Request $request)
+    {
+        $user = User::where('email',$request->email)->first();
+        $email = $user['email'];
+        $password = $user['password'];
+        $requestPassword=$request->password;
+        if (Hash::check($requestPassword,$password) && $email)
+        {
+            Auth::login($user);
+            return $this->redirectTo();
+        }
+        else{
+            return redirect()->back()->with('message','Invalid Email or Password')->withInput(['email'=>$email]);
+        }
+    }
 
     /**
      * Create a new controller instance.
