@@ -4,13 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class TestController extends Controller
+class FrontendController extends Controller
 {
-    public function test(){
-
-        return view('layouts.admin-dash-master');
-    }
-
     public function index(){
         return view('layouts.frontend.pages.intro');
 
@@ -22,5 +17,9 @@ class TestController extends Controller
 
     }
 
+    public function getData(Request $request){
 
+        dd($request);
+
+    }
 }

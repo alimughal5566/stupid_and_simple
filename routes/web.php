@@ -11,13 +11,46 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+    Route::group(['Karyana'],function () {
 
-Auth::routes();
+        Route::get('/', function () {return view('welcome');});
 
-Route::get('/home', 'HomeController@index')->name('home');
-Route::get('/test', 'TestController@test')->name('test');
-Route::get('index', 'TestController@index')->name('index');
-Route::get('main-page', 'TestController@main')->name('mainPage');
+        Auth::routes();
+
+        Route::get('/home', 'HomeController@index')->name('home');
+
+
+
+
+        Route::group(['Public'],function () {
+
+
+                Route::group(['FrontendController'],function () {
+
+                    Route::get('index', 'FrontendController@index')->name('index');
+                    Route::get('main-page', 'FrontendController@main')->name('mainPage');
+                    Route::post('get-data', 'FrontendController@getData')->name('getData');
+
+
+                });
+        });
+
+
+        Route::group(['Private'],function () {
+
+
+
+                    Route::group(['AdmindashController'],function () {
+
+                        Route::get('/admin-dash', 'AdmindashController@admindash')->name('admindash');
+
+                    });
+
+
+        });
+
+
+
+    });
+
+

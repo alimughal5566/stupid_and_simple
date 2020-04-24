@@ -420,14 +420,22 @@
                         <img src="img/demo/user-avatar.jpg" alt="">
                     </a>
                     <ul class="dropdown-menu pull-right">
+{{--                        <li>--}}
+{{--                            <a href="more-userprofile.html">Edit profile</a>--}}
+{{--                        </li>--}}
+{{--                        <li>--}}
+{{--                            <a href="#">Account settings</a>--}}
+{{--                        </li>--}}
                         <li>
-                            <a href="more-userprofile.html">Edit profile</a>
-                        </li>
-                        <li>
-                            <a href="#">Account settings</a>
-                        </li>
-                        <li>
-                            <a href="more-login.html">Sign out</a>
+                            @auth
+                                <form method="post" action="{{route('logout')}}" class="dropdown-item">
+
+                                    @csrf
+
+                                    <button class="btn btn-primary" type="submit">Logout</button>
+                                </form>
+                                @endauth
+                            </a>
                         </li>
                     </ul>
                 </div>
