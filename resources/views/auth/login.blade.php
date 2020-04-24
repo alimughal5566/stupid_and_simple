@@ -62,6 +62,7 @@
     <div class="login-body">
         <h2>SIGN IN</h2>
         <form method="POST" action="{{ route('login') }}" class='form-validate' id="test">
+            @csrf
             <div class="form-group">
                 <div class="email controls">
                     <input type="text" name='email' placeholder="Email address" class='form-control' data-rule-required="true" data-rule-email="true">

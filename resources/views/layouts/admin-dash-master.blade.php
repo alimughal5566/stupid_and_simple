@@ -41,7 +41,7 @@
 {{--    <link rel="stylesheet" href="css/themes.css">--}}
     <link rel="stylesheet" href="{{asset('assets/backend/admin-dash/css/themes.css')}}">
 
-
+    <link rel="stylesheet" href="{{asset('css/plugins/datatable/TableTools.css')}}">
     <!-- Favicon -->
 {{--    <link rel="shortcut icon" href="img/favicon.ico" />--}}
     <link rel="shortcut icon" href="{{asset('assets/backend/admin-dash/img/favicon.ico')}}" />
@@ -690,11 +690,94 @@
             <div class="row">
                 <div class="col-sm-12">
                     <div class="box">
-                        <div class="box-title">
-                            <h3>
-                                <i class="fa fa-bars"></i>
-                                Basic Widget
-                            </h3>
+{{--                        <div class="box-title">--}}
+{{--                            <h3>--}}
+{{--                                <i class="fa fa-bars"></i>--}}
+{{--                                Basic Widget--}}
+{{--                            </h3>--}}
+{{--                        </div>--}}
+                        <div class="col-sm-12">
+                            <div class="box box-color box-bordered">
+                                <div class="box-title">
+                                    <h3>
+                                        <i class="fa fa-table"></i>
+                                        Feedback
+                                    </h3>
+                                </div>
+                                <div class="box-content nopadding">
+                                    <div id="DataTables_Table_0_wrapper" class="dataTables_wrapper no-footer">
+{{--                                        <div class="dataTables_length" id="DataTables_Table_0_length">--}}
+{{--                                            <label>Show <select name="DataTables_Table_0_length" aria-controls="DataTables_Table_0" class="">--}}
+{{--                                                    <option value="10">10</option><option value="25">25</option><option value="50">50</option>--}}
+{{--                                                    <option value="100">100</option>--}}
+{{--                                                </select> entries--}}
+{{--                                            </label>--}}
+{{--                                        </div>--}}
+{{--                                        <div id="DataTables_Table_0_filter" class="dataTables_filter">--}}
+{{--                                            <label>Search:<input type="search" class="" placeholder="" aria-controls="DataTables_Table_0">--}}
+{{--                                            </label>--}}
+{{--                                        </div>--}}
+                                        <table class="table table-hover table-nomargin table-bordered dataTable no-footer" id="DataTables_Table_0" role="grid" aria-describedby="DataTables_Table_0_info" style="width: 1105px;">
+                                            <thead>
+                                            <tr role="row">
+                                                <th class="d-none" style="display: none">id</th>
+                                                <th class="sorting_asc" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="Rendering engine: activate to sort column descending" style="width: 210px;" aria-sort="ascending">Name</th>
+                                                <th class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="Browser: activate to sort column ascending" style="width: 202px;">Email</th>
+                                                <th class="hidden-350 sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="Platform(s): activate to sort column ascending" style="width: 184px;">Date Of Birth</th>
+                                                <th class="hidden-1024 sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="Engine version: activate to sort column ascending" style="width: 178px;">IBAN</th>
+                                                <th class="hidden-480 sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="CSS grade: activate to sort column ascending">Date</th>
+                                                <th class="hidden-480 sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="CSS grade: activate to sort column ascending" style="width: 133px;">Action</th>
+                                            </tr>
+                                            </thead>
+                                            <tbody>
+                                            @foreach($feedback as $feed)
+                                            <tr role="row" class="odd">
+                                                <td class="d-none" style="display: none">{{$feed['id']}}</td>
+                                                <td class="sorting_1">{{$feed['name_first'].' '.$feed['nashname']}}</td>
+                                                <td>{{$feed['email']}}</td>
+                                                <td class="hidden-350">{{$feed['gebdatum']}}</td>
+                                                <td class="hidden-1024">{{$feed['IBAN']}}</td>
+                                                <td class="hidden-480">{{$feed['Datum']}}</td>
+                                                <td>
+                                                    <button class="view-data-btn" data-toggle="modal" data-target="#exampleModal" ><i class="fa fa-search"></i></button>
+                                                    <button data-original-title="Edit"><i class="fa fa-edit"></i></button>
+                                                </td>
+                                            </tr>
+                                            @endforeach
+                                            </tbody>
+                                        </table>
+{{--                                        <div class="dataTables_info" id="DataTables_Table_0_info" role="status" aria-live="polite">Showing 1 to 10 of 18 entries</div>--}}
+{{--                                        <div class="dataTables_paginate paging_simple_numbers" id="DataTables_Table_0_paginate">--}}
+{{--                                            <a class="paginate_button previous disabled" aria-controls="DataTables_Table_0" data-dt-idx="0" tabindex="0" id="DataTables_Table_0_previous">Previous</a>--}}
+{{--                                            <span>--}}
+{{--                                                <a class="paginate_button current" aria-controls="DataTables_Table_0" data-dt-idx="1" tabindex="0">1</a>--}}
+{{--                                                <a class="paginate_button " aria-controls="DataTables_Table_0" data-dt-idx="2" tabindex="0">2</a>--}}
+{{--                                            </span>--}}
+{{--                                            <a class="paginate_button next" aria-controls="DataTables_Table_0" data-dt-idx="3" tabindex="0" id="DataTables_Table_0_next">Next</a>--}}
+{{--                                        </div>--}}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    <!-- View Modal -->
+                        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title text-uppercase" id="exampleModalLabel">View data</h5>
+{{--                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">--}}
+{{--                                            <span aria-hidden="true">&times;</span>--}}
+{{--                                        </button>--}}
+                                    </div>
+                                    <div class="modal-body" id="show-feed-back-modal">
+
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+{{--                                        <button type="button" class="btn btn-primary">Save changes</button>--}}
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                         <div class="box-content">
                             @yield('content')
@@ -759,6 +842,13 @@
 {{--    <script src="js/plugins/touch-punch/jquery.touch-punch.min.js"></script>--}}
 <script src="{{asset('assets/backend/admin-dash/js/plugins/touch-punch/jquery.touch-punch.min.js')}}"></script>
 <!-- slimScroll -->
+
+<script src="js/plugins/datatables/jquery.dataTables.min.js"></script>
+{{--<script src="js/plugins/datatables/extensions/dataTables.tableTools.min.js"></script>--}}
+{{--<script src="js/plugins/datatables/extensions/dataTables.colReorder.min.js"></script>--}}
+{{--<script src="js/plugins/datatables/extensions/dataTables.colVis.min.js"></script>--}}
+{{--<script src="js/plugins/datatables/extensions/dataTables.scroller.min.js"></script>--}}
+
 {{--    <script src="js/plugins/slimscroll/jquery.slimscroll.min.js"></script>--}}
 <script src="{{asset('assets/backend/admin-dash/js/plugins/slimscroll/jquery.slimscroll.min.js')}}"></script>
 <!-- Bootstrap -->
@@ -821,6 +911,23 @@
 <script>
     $(document).ready(function() {
         $('input, textarea').placeholder();
+    });
+
+    $('.view-data-btn').on('click',function (e) {
+        e.preventDefault();
+        let id=$(this).parent().siblings()[0].innerHTML;
+        let url = 'view-data'+'/'+id;
+        let type = 'get';
+        $.ajax({
+            url:url,
+            type:type,
+            success:function (response) {
+                $('#show-feed-back-modal').html(response);
+            },
+            error:function (error) {
+                console.log(error);
+            }
+        })
     });
 </script>
 
