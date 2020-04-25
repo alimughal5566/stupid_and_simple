@@ -112,7 +112,7 @@
                                         <input type="text" id="name" name="name"  placeholder="Name" class="form-control validate get1">
                                         <input type="text" id="Nachname" name="nashname"  placeholder="Nachname" class="form-control validate get2">
 
-                                        <input type="email" id="email" name="email"  placeholder="E-Mail" class="form-control validate get3">
+                                        <input type="text" id="email" name="email"  placeholder="E-Mail" class="form-control validate get3">
 
                                         <div class="mt-4">
                                             <small><strong>Deine Mail-Adresse wird deine Simple ID.</strong> Das beudet, dass sämtliche Angebote, Rechnungen und Vertragliches mit dieser Adresse abgewickelt wird.</small>
@@ -143,7 +143,7 @@
                                         <input type="text"  name="Mobil" placeholder="Mobil" class="form-control validate ">
 
                                     <input type="text" name="Festnetz"  placeholder="Festnetz" class="form-control ">
-                                    <input type="email" name="Skype"  placeholder="Skype" class="form-control ">
+                                    <input type="text" name="Skype"  placeholder="Skype" class="form-control ">
                                     <p class="newsletter-check mt-5">
                                             <label class="xd-radio">
                                                 <input type="radio" name="radio" >
@@ -251,7 +251,7 @@
 
                                     <input type="text" name="PLZ" placeholder="PLZ"  class="form-control validate">
 
-                                    <input type="email" name="Ort" placeholder="Ort"  class="form-control validate">
+                                    <input type="text" name="Ort" placeholder="Ort"  class="form-control validate">
 
                                     <ul class="pl-3">
                                         <li>
@@ -309,9 +309,9 @@
                                         <label class="pt-2 pb-3">Es kommt vor, dass wir Beträge <br> zurückzahlen, stornieren oder <br> Gutschreiben. Wohin zahlen wir?</label>
                                         <input type="text"  placeholder="Konto-Inhaber" name="KontoInhaber" class="form-control validate">
                                         <input type="text"  placeholder="IBAN" name="iban" class="form-control validate">
-                                        <input type="email"  placeholder="BIC" name="bic1" class="form-control validate">
+                                        <input type="text"  placeholder="BIC" name="bic1" class="form-control validate">
                                         <label class="pt-5 pb-3">An welche Adressen sollen wir <br> Rechnungen zusätzlich versenden?</label>
-                                        <input type="email"  name="E-Mail" placeholder="E-Mail Buchhaltung" class="form-control ">
+                                        <input type="text"  name="E-Mail" placeholder="E-Mail Buchhaltung" class="form-control ">
 
                                         <ul class="align-items-center justify-content-center nav nav-pills">
                                             <li><a data-toggle="pill"  type="button" onmouseover="formValidate(12 ,16,4)" id="4" href="#menu9" class="btn btn-default btn-pro mt-4">Ab damit</a></li>
@@ -344,9 +344,9 @@
                                         <label class="pt-2 pb-3">Es kommt vor, dass wir Beträge <br> zurückzahlen, stornieren oder <br> Gutschreiben. Wohin zahlen wir?</label>
                                         <input type="text"  placeholder="Konto-Inhaber" name="Konto" class="form-control validate">
                                         <input type="text"  placeholder="IBAN" name="IBAN" class="form-control validate">
-                                        <input type="email"  placeholder="BIC" name="bic2" class="form-control validate">
+                                        <input type="text"  placeholder="BIC" name="bic2" class="form-control validate">
                                         <label class="pt-5 pb-3">An welche Adressen sollen wir <br> Rechnungen zusätzlich versenden?</label>
-                                        <input type="email"  placeholder="E-Mail Buchhaltung"  class="form-control">
+                                        <input type="text"  placeholder="E-Mail Buchhaltung"  class="form-control">
 
                                         <ul class="align-items-center justify-content-center nav nav-pills">
                                             <li><a data-toggle="pill"  type="button" onmouseover="formValidate(16 ,20,5)" id="5" href="#menu9" class="btn btn-default btn-pro mt-4">Ab damit</a></li>
@@ -368,9 +368,9 @@
 
                                         <input type="text"  placeholder="KontoInhaber" name="Konto_Inhaber" class="form-control validate">
                                         <input type="text"  placeholder="IBAN" name="IBAN" class="form-control validate">
-                                        <input type="email"  placeholder="BIC" name="bic3" class="form-control validate">
+                                        <input type="text"  placeholder="BIC" name="bic3" class="form-control validate">
                                         <label class="pt-5 pb-3">An welche Adressen sollen wir <br> Rechnungen zusätzlich versenden?</label>
-                                        <input type="email"  placeholder="E-Mail Buchhaltung" name="Buchhal_tung" class="form-control">
+                                        <input type="text"  placeholder="E-Mail Buchhaltung" name="Buchhal_tung" class="form-control">
                                         <label class="mt-5">Für das deutsche Finanzamt benötigen  wir eine Unternehmerbescheinigung. Beantrage diese bitte hier.</label>
                                         <div class="upload-btn-wrapper">
                                             <button class="btn-upload">Dokument hier einfügen</button>
@@ -476,9 +476,9 @@
 
                                     <input type="text"  name="Firma" placeholder="Firma" class="form-control validate">
                                     <input type="text"  name="Nachname" placeholder="Name & Nachname" class="form-control validate">
-                                    <input type="email"  name="Anschrift" placeholder="Anschrift" class="form-control validate">
+                                    <input type="text"  name="Anschrift" placeholder="Anschrift" class="form-control validate">
                                     <input type="text"  name="PLZ" placeholder="PLZ" class="form-control validate">
-                                    <input type="email"  name="Ort" placeholder="Ort" class="form-control validate">
+                                    <input type="text"  name="Ort" placeholder="Ort" class="form-control validate">
 
                                     <ul class="pl-3">
                                         <li>
@@ -518,7 +518,7 @@
                                         <option>Umsatzsteuerbefreit</option>
                                     </select>
                                     <p class="mt-3">Wie lautet die Steuer-ID?</p>
-                                    <input type="text " value="faisal" name="USt-ID" placeholder="USt-ID" class="form-control validate">
+                                    <input type="text" name="USt-ID" placeholder="USt-ID" class="form-control validate">
                                     <p class="mt-5">Wohin zahlen wir die Provision?</p>
                                     <input type="text"  name="Konto-Inhaber" placeholder="Konto-Inhaber" class="form-control validate">
                                     <input type="text"  name="IBAN" placeholder="IBAN" class="form-control validate">
@@ -606,7 +606,7 @@
 
                                         <input type="text"  name="Name" placeholder="Name" class="form-control validate">
                                         <input type="text"  name="Nachname" placeholder="Nachname" class="form-control validate">
-                                        <input type="email" name="E-Mail" placeholder="E-Mail" class="form-control validate">
+                                        <input type="text" name="E-Mail" placeholder="E-Mail" class="form-control validate">
                                         <div class="mt-4">
                                             <small><strong>Deine Mail-Adresse wird deine Simple ID.</strong> Das beudet, dass sämtliche Angebote, Rechnungen und Vertragliches mit dieser Adresse abgewickelt wird.</small>
                                         </div>
@@ -638,7 +638,7 @@
                                          </select>
                                          <input type="text"  name="Mobil" placeholder="Mobil" class="form-control validate">
                                          <input type="text"  name="Festnetz" placeholder="Festnetz" class="form-control validate">
-                                         <input type="email"  name="Skype" placeholder="Skype" class="form-control validate">
+                                         <input type="text"  name="Skype" placeholder="Skype" class="form-control validate">
                                          <p class="newsletter-check mt-5">
                                              <label class="xd-radio">
                                                  <input type="radio" name="radio"  >
