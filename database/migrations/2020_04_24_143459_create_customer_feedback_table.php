@@ -49,8 +49,8 @@ class CreateCustomerFeedbackTable extends Migration
             $table->string('Konto-Inhaber',255)->nullable();
             $table->string('bic4',255)->nullable();
             $table->string('Gutschriften',255)->nullable();
-            $table->string('Name',255);
-            $table->date('Datum');
+            $table->string('Name',255)->nullable();
+            $table->date('Datum')->nullable();
             $table->string('radio1',255)->nullable();
             $table->timestamps();
         });

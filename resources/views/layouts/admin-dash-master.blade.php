@@ -722,6 +722,16 @@
 {{--                                            <label>Search:<input type="search" class="" placeholder="" aria-controls="DataTables_Table_0">--}}
 {{--                                            </label>--}}
 {{--                                        </div>--}}
+                                        <form>
+                                                @csrf
+                                                <input type="date" required name="start_date" id="select-start-date" placeholder="Select start date">
+                                                <input type="date" required name="end_date" id="select-end-date" placeholder="Select end date">
+                                                <button class="btn btn-primary" id="get-report-btn">Get</button>
+                                        </form>
+                                        <form action="{{route('printReport')}}" method="get">
+                                            <input type="hidden"  name="report_id">
+                                            <button style="margin-top: 10px; float: right" class="btn btn-danger report-print-btn"><i class="fa fa-print"></i> Print</button>
+                                        </form>
                                         <table class="table table-hover table-nomargin table-bordered dataTable no-footer" id="DataTables_Table_0" role="grid" aria-describedby="DataTables_Table_0_info" style="width: 1105px;">
                                             <thead>
                                             <tr role="row">
@@ -734,10 +744,10 @@
                                                 <th class="hidden-480 sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="CSS grade: activate to sort column ascending" style="width: 133px;">Action</th>
                                             </tr>
                                             </thead>
-                                            <tbody>
+                                            <tbody id="get-report-ajax">
                                             @foreach($feedback as $feed)
                                             <tr role="row" class="odd">
-                                                <td class="d-none" style="display: none">{{$feed['id']}}</td>
+                                                <td class="d-none get-id-reports" style="display: none">{{$feed['id']}}</td>
                                                 <td class="sorting_1">{{$feed['name_first'].' '.$feed['nashname']}}</td>
                                                 <td>{{$feed['email']}}</td>
                                                 <td class="hidden-350">{{$feed['gebdatum']}}</td>
@@ -969,6 +979,28 @@
                 console.log(error);
            }
         });
+    });
+    $('#get-report-btn').on('click',function (e) {
+        e.preventDefault();
+        let start=$('#select-start-date').val();
+        let end=$('#select-end-date').val();
+        $.ajax({
+            url:"/get-report",
+            type:"get",
+            data:{'start_date':start,'end_date':end},
+            success:function (response){
+                $('#get-report-ajax').html(response);
+            },error:function (error){
+                console.log(error);
+            }
+        });
+    });
+    $('.report-print-btn').on('click',function (e) {
+        let valueId = [];
+        $('.get-id-reports').each(function (i) {
+            valueId[i] = $(this).text();
+        });
+        $('input[name="report_id"]').val(valueId);
     });
 </script>
 
