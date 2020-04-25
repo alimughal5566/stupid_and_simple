@@ -676,7 +676,7 @@
                                     <li>
                                         <p class="newsletter-check">
                                             <label class="xd-radio">
-                                                <input type="radio" name="radio2">
+                                                <input type="radio" name="radio2" required>
                                                 <span class="checkmark"></span>
                                             </label>
                                             Ich bestätige, die <a href="#"> AGB </a> gelesen und verstanden zu haben

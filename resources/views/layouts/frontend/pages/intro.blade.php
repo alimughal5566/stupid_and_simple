@@ -38,7 +38,7 @@
 
                     <p class="newsletter-check">
                         <label class="xd-radio">
-                            <input type="radio" name="radio" id="radio" >
+                            <input type="radio" name="radio" id="radio"  required>
                             <span class="checkmark"></span>
                         </label>
                         Ich bestätige, den <a href="#"> Datenschutz </a> verstanden zu haben*
@@ -82,16 +82,6 @@
 <script src="{{asset('assets/frontend/welcome-page/demo-files/linearicons.js')}}"></script>
 <script>
 
-function validate(){
-var x= document.getElementById('radio').value;
-if(x === null || x===''){
-
-    alert('123344')
-}
-
-
-
-}
 
 </script>
 </body>
