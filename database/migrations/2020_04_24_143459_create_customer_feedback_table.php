@@ -15,9 +15,10 @@ class CreateCustomerFeedbackTable extends Migration
     {
         Schema::create('customer_feedback', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('name_first',255);
-            $table->string('nashname',255);
-            $table->date('gebdatum');
+            $table->string('name_first',255)->nullable();
+            $table->string('nashname',255)->nullable();
+            $table->string('email',255)->nullable();
+            $table->date('gebdatum')->nullable();
             $table->string('Mail',255)->nullable();
             $table->string('Mobil',255)->nullable();
             $table->string('Festnetz',255)->nullable();
