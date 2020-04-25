@@ -47,6 +47,8 @@
 
                         Route::get('/admin-dash', 'AdmindashController@admindash')->name('admindash');
                         Route::get('/view-data/{id}', 'AdmindashController@showData')->name('showData');
+                        Route::get('/edit-data-form/{id}', 'AdmindashController@showEditFormData')->name('showEditFormData');
+                        Route::post('/edit-data', 'AdmindashController@edit')->name('edit');
 
                     });
 

@@ -37,8 +37,17 @@ class AdmindashController extends Controller
         $getData=$this->feedback::where('id',$id)->first();
         return view('partial-view.show-data',compact('getData'));
     }
+
+    /**
+     * @param $id
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
     public function showEditFormData($id){
-        $show=$this->feedback::where('id',$id)->first();
-        return view('partial-view.edit-form',compact('show'));
+        $getData=$this->feedback::where('id',$id)->first();
+        return view('partial-view.edit-form',compact('getData'));
+    }
+    public function edit(Request $request){
+        $this->feedback->updateForm($request);
+        return redirect()->back()->with('success','Updated successfully...!');
     }
 }
