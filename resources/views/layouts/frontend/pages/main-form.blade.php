@@ -104,19 +104,19 @@
                                 <h2><span class="icon-user"></span></h2>
                                 <p>Ich bin Jan, wer bist du?</p>
                                 <div class="mt-5">
-                                        <input type="text" id="name" name="name" value="ali" placeholder="Name" class="form-control validate">
-                                        <input type="text" id="Nachname" name="nashname" value="ali" placeholder="Nachname" class="form-control validate">
+                                        <input type="text" id="name" name="name"  placeholder="Name" class="form-control validate get1">
+                                        <input type="text" id="Nachname" name="nashname"  placeholder="Nachname" class="form-control validate get2">
 
-                                        <input type="email" id="email" name="email" value="Ali@gmail.com" placeholder="E-Mail" class="form-control validate">
+                                        <input type="email" id="email" name="email"  placeholder="E-Mail" class="form-control validate get3">
 
                                         <div class="mt-4">
                                             <small><strong>Deine Mail-Adresse wird deine Simple ID.</strong> Das beudet, dass sämtliche Angebote, Rechnungen und Vertragliches mit dieser Adresse abgewickelt wird.</small>
                                         </div>
                                         <p class="mt-4">Sind wir ein Jahrgang?</p>
-                                        <input type="date" id="gebdatum" name="gebdatum" value="2020-04-22" placeholder="Geb Datum" class="form-control mt-3 validate">
+                                        <input type="date" id="gebdatum" name="gebdatum"  placeholder="Geb Datum" class="form-control mt-3 validate get4">
 
                                         <ul class="align-items-center justify-content-center nav nav-pills">
-                                            <li><a data-toggle="pill" onmouseover="formValidate(0 , 4 , 1 )" id="1" href="#menu3"  class="btn btn-default btn-pro mt-5" >Das bin ich</a></li>
+                                            <li><a data-toggle="pill" onmouseover="formValidate(0 , 4 , 1 )" id="1" href="#menu3"  class="btn btn-default btn-pro mt-5 get" >Das bin ich</a></li>
                                         </ul>
 
 {{--                                        <button type="submit"  class="btn btn-default btn-pro mt-5">Das bin ich</button>--}}
@@ -132,14 +132,14 @@
                                 <div class="mt-5">
                                         <select class="form-control mb-5 validate" name="Mail" >
                                             <option value="">Select</option>
-                                            <option selected>Mail</option>
+                                            <option>Mail</option>
                                             <option>Whatsapp</option>
                                             <option>Tel</option>
                                         </select>
-                                        <input type="text" value="123456" name="Mobil" placeholder="Mobil" class="form-control validate ">
+                                        <input type="text"  name="Mobil" placeholder="Mobil" class="form-control validate ">
 
-                                    <input type="text" name="Festnetz" value="336546532" placeholder="Festnetz" class="form-control ">
-                                    <input type="email" name="Skype" value="Ali@gmail.com" placeholder="Skype" class="form-control ">
+                                    <input type="text" name="Festnetz"  placeholder="Festnetz" class="form-control ">
+                                    <input type="email" name="Skype"  placeholder="Skype" class="form-control ">
                                     <p class="newsletter-check mt-5">
                                             <label class="xd-radio">
                                                 <input type="radio" name="radio" >
@@ -165,7 +165,7 @@
 {{--                                <div class="company-field">--}}
 {{--                                <div>--}}
 {{--                                    <input type="text" name="Firmenname" class="validate form-control" placeholder="Firmenname & Rechtsform">--}}
-                                    <input type="text" name="firmen_name" value="faisal" class="validate form-control" placeholder="Firmenname & Rechtsform">
+                                    <input type="text" name="firmen_name" class="validate form-control" placeholder="Firmenname & Rechtsform">
 {{--                                    <input type="text" name="Fir" class="form-control" placeholder="Firmenname & Rechtsform">--}}
 {{--                                </div>--}}
 
@@ -238,16 +238,16 @@
 
 
 
-                                    <input type="text"  name="firmen2_name" value="faisal" placeholder="Firmenname" class="form-control validate">
+                                    <input type="text"  name="firmen2_name"  placeholder="Firmenname" class="form-control validate">
 
 
-                                    <input type="text" name="Adresszusatz" value="faisal" placeholder="Adresszusatz" class="form-control validate">
+                                    <input type="text" name="Adresszusatz"  placeholder="Adresszusatz" class="form-control validate">
 
-                                    <input type="email" name="Anschrift" value="faisal@gmail.com" placeholder="Anschrift" class="form-control validate">
+                                    <input type="email" name="Anschrift"  placeholder="Anschrift" class="form-control validate">
 
-                                    <input type="text" name="PLZ" placeholder="PLZ" value="faisal" class="form-control validate">
+                                    <input type="text" name="PLZ" placeholder="PLZ"  class="form-control validate">
 
-                                    <input type="email" name="Ort" placeholder="Ort" value="faisal@gmail.com" class="form-control validate">
+                                    <input type="email" name="Ort" placeholder="Ort"  class="form-control validate">
 
                                     <ul class="pl-3">
                                         <li>
@@ -298,16 +298,16 @@
 
                                         <select class="form-control mb-5 validate" name="select" >
                                             <option value="">Select</option>
-                                            <option selected>Ja</option>
+                                            <option >Ja</option>
                                             <option>Umsatzsteuerpflichtig</option>
                                             <option>Umsatzsteuerbefreit</option>
                                         </select>
                                         <label class="pt-2 pb-3">Es kommt vor, dass wir Beträge <br> zurückzahlen, stornieren oder <br> Gutschreiben. Wohin zahlen wir?</label>
-                                        <input type="text" value="faisal" placeholder="Konto-Inhaber" name="KontoInhaber" class="form-control validate">
-                                        <input type="text" value="faisal" placeholder="IBAN" name="iban" class="form-control validate">
-                                        <input type="email" value="faisal@gmail.com" placeholder="BIC" name="bic1" class="form-control validate">
+                                        <input type="text"  placeholder="Konto-Inhaber" name="KontoInhaber" class="form-control validate">
+                                        <input type="text"  placeholder="IBAN" name="iban" class="form-control validate">
+                                        <input type="email"  placeholder="BIC" name="bic1" class="form-control validate">
                                         <label class="pt-5 pb-3">An welche Adressen sollen wir <br> Rechnungen zusätzlich versenden?</label>
-                                        <input type="email" value="faisal@gmail.com" name="E-Mail" placeholder="E-Mail Buchhaltung" class="form-control ">
+                                        <input type="email"  name="E-Mail" placeholder="E-Mail Buchhaltung" class="form-control ">
 
                                         <ul class="align-items-center justify-content-center nav nav-pills">
                                             <li><a data-toggle="pill"  type="button" onmouseover="formValidate(12 ,16,4)" id="4" href="#menu9" class="btn btn-default btn-pro mt-4">Ab damit</a></li>
@@ -333,16 +333,16 @@
                                         <label class="mt-5 pb-3">Seid ihr mehrwertsteuerpflichtig?</label>
                                         <select class="form-control mb-5 validate">
                                             <option value="">Select</option>
-                                            <option selected>Ja</option>
+                                            <option>Ja</option>
                                             <option>Umsatzsteuerpflichtig</option>
                                             <option>Umsatzsteuerbefreit</option>
                                         </select>
                                         <label class="pt-2 pb-3">Es kommt vor, dass wir Beträge <br> zurückzahlen, stornieren oder <br> Gutschreiben. Wohin zahlen wir?</label>
-                                        <input type="text" value="faisal" placeholder="Konto-Inhaber" name="Konto" class="form-control validate">
-                                        <input type="text" value="faisal" placeholder="IBAN" name="IBAN" class="form-control validate">
-                                        <input type="email" value="faisal@gmail.com" placeholder="BIC" name="bic2" class="form-control validate">
+                                        <input type="text"  placeholder="Konto-Inhaber" name="Konto" class="form-control validate">
+                                        <input type="text"  placeholder="IBAN" name="IBAN" class="form-control validate">
+                                        <input type="email"  placeholder="BIC" name="bic2" class="form-control validate">
                                         <label class="pt-5 pb-3">An welche Adressen sollen wir <br> Rechnungen zusätzlich versenden?</label>
-                                        <input type="email" value="faisal@gmail.com" placeholder="E-Mail Buchhaltung"  class="form-control">
+                                        <input type="email"  placeholder="E-Mail Buchhaltung"  class="form-control">
 
                                         <ul class="align-items-center justify-content-center nav nav-pills">
                                             <li><a data-toggle="pill"  type="button" onmouseover="formValidate(16 ,20,5)" id="5" href="#menu9" class="btn btn-default btn-pro mt-4">Ab damit</a></li>
@@ -362,11 +362,11 @@
 
                                 <div class="mt-2">
 
-                                        <input type="text" value="faisal" placeholder="KontoInhaber" name="Konto_Inhaber" class="form-control validate">
-                                        <input type="text" value="faisal" placeholder="IBAN" name="IBAN" class="form-control validate">
-                                        <input type="email" value="faisal@gmail.com" placeholder="BIC" name="bic3" class="form-control validate">
+                                        <input type="text"  placeholder="KontoInhaber" name="Konto_Inhaber" class="form-control validate">
+                                        <input type="text"  placeholder="IBAN" name="IBAN" class="form-control validate">
+                                        <input type="email"  placeholder="BIC" name="bic3" class="form-control validate">
                                         <label class="pt-5 pb-3">An welche Adressen sollen wir <br> Rechnungen zusätzlich versenden?</label>
-                                        <input type="email" value="faisal@gmail.com" placeholder="E-Mail Buchhaltung" name="Buchhal_tung" class="form-control">
+                                        <input type="email"  placeholder="E-Mail Buchhaltung" name="Buchhal_tung" class="form-control">
                                         <label class="mt-5">Für das deutsche Finanzamt benötigen  wir eine Unternehmerbescheinigung. Beantrage diese bitte hier.</label>
                                         <div class="upload-btn-wrapper">
                                             <button class="btn-upload">Dokument hier einfügen</button>
@@ -470,11 +470,11 @@
 
 {{--                                <form class="text-center ">--}}
 
-                                    <input type="text" value="faisal" name="Firma" placeholder="Firma" class="form-control validate">
-                                    <input type="text" value="faisal" name="Nachname" placeholder="Name & Nachname" class="form-control validate">
-                                    <input type="email" value="faisal@gmail.com" name="Anschrift" placeholder="Anschrift" class="form-control validate">
-                                    <input type="text" value="faisal" name="PLZ" placeholder="PLZ" class="form-control validate">
-                                    <input type="email" value="faisal@gmail.com" name="Ort" placeholder="Ort" class="form-control validate">
+                                    <input type="text"  name="Firma" placeholder="Firma" class="form-control validate">
+                                    <input type="text"  name="Nachname" placeholder="Name & Nachname" class="form-control validate">
+                                    <input type="email"  name="Anschrift" placeholder="Anschrift" class="form-control validate">
+                                    <input type="text"  name="PLZ" placeholder="PLZ" class="form-control validate">
+                                    <input type="email"  name="Ort" placeholder="Ort" class="form-control validate">
 
                                     <ul class="pl-3">
                                         <li>
@@ -509,18 +509,18 @@
                                     <p class="mt-5">Bist du mehrwertsteuerpflichtig?</p>
                                     <select class="form-control mb-5 validate">
                                         <option value="">Select</option>
-                                        <option selected>Ja</option>
+                                        <option >Ja</option>
                                         <option>Umsatzsteuerpflichtig</option>
                                         <option>Umsatzsteuerbefreit</option>
                                     </select>
                                     <p class="mt-3">Wie lautet die Steuer-ID?</p>
                                     <input type="text " value="faisal" name="USt-ID" placeholder="USt-ID" class="form-control validate">
                                     <p class="mt-5">Wohin zahlen wir die Provision?</p>
-                                    <input type="text" value="faisal" name="Konto-Inhaber" placeholder="Konto-Inhaber" class="form-control validate">
-                                    <input type="text" value="faisal" name="IBAN" placeholder="IBAN" class="form-control validate">
-                                    <input type="text" value="faisal" name="bic4" placeholder="BIC" class="form-control validate">
+                                    <input type="text"  name="Konto-Inhaber" placeholder="Konto-Inhaber" class="form-control validate">
+                                    <input type="text"  name="IBAN" placeholder="IBAN" class="form-control validate">
+                                    <input type="text"  name="bic4" placeholder="BIC" class="form-control validate">
                                     <p class="mt-4">An welche Adresse sollen wir deine <br> Gutschrift-Dokumente für deine Steuern senden</p>
-                                    <input type="text" value="faisal" name="Gutschriften" placeholder="E-Mail Gutschriften" class="form-control">
+                                    <input type="text"  name="Gutschriften" placeholder="E-Mail Gutschriften" class="form-control">
                                     <div class="mt-5">
                                         <ul class="align-items-center justify-content-center nav nav-pills">
                                             <li><a data-toggle="pill"  type="button" onmouseover="formValidate(24,34,7)" id="7" href="#menu12" class="btn mb-80 btn-default btn-pro mt-3">Super, weiter geht’s</a></li>
@@ -541,28 +541,28 @@
                             <h2><span class="icon-magnifier"></span></h2>
                             <p>Du hast es geschafft. Jetzt nur noch alle <br> Angaben sorgfältig prüfen und <br> bestätigen.</p>
                             <div class="small-container">
-{{--                                <table class="table text-left table-borderless data-check-table mt-5">--}}
-{{--                                    <thead>--}}
-{{--                                    <tr>--}}
-{{--                                        <th scope="col">Title</th>--}}
-{{--                                        <td>Input</td>--}}
-{{--                                    </tr>--}}
-{{--                                    </thead>--}}
-{{--                                    <tbody>--}}
-{{--                                    <tr>--}}
-{{--                                        <th scope="row">Title</th>--}}
-{{--                                        <td>Input</td>--}}
-{{--                                    </tr>--}}
-{{--                                    <tr>--}}
-{{--                                        <th scope="row">Title</th>--}}
-{{--                                        <td>Input</td>--}}
-{{--                                    </tr>--}}
-{{--                                    <tr>--}}
-{{--                                        <th scope="row">Title</th>--}}
-{{--                                        <td>Input</td>--}}
-{{--                                    </tr>--}}
-{{--                                    </tbody>--}}
-{{--                                </table>--}}
+                                <table class="table text-left table-borderless data-check-table mt-5">
+                                    <thead>
+                                    <tr>
+                                        <th scope="col">Title</th>
+                                        <td>Input</td>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <th scope="row">Title</th>
+                                        <td>Input</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Title</th>
+                                        <td>Input</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Title</th>
+                                        <td>Input</td>
+                                    </tr>
+                                    </tbody>
+                                </table>
                                 <ul class="align-items-center justify-content-center nav nav-pills">
                                     <li><a data-toggle="pill"  type="button" href="#menu13" class="btn btn-default btn-pro mt-5">Alles super</a></li>
                                 </ul>
@@ -600,14 +600,14 @@
                                 <p>Ich bin Jan, wer bist du?</p>
                                 <div class="mt-5">
 
-                                        <input type="text" value="faisal" name="Name" placeholder="Name" class="form-control validate">
-                                        <input type="text" value="faisal" name="Nachname" placeholder="Nachname" class="form-control validate">
-                                        <input type="email"value="faisal@gmail.com" name="E-Mail" placeholder="E-Mail" class="form-control validate">
+                                        <input type="text"  name="Name" placeholder="Name" class="form-control validate">
+                                        <input type="text"  name="Nachname" placeholder="Nachname" class="form-control validate">
+                                        <input type="email" name="E-Mail" placeholder="E-Mail" class="form-control validate">
                                         <div class="mt-4">
                                             <small><strong>Deine Mail-Adresse wird deine Simple ID.</strong> Das beudet, dass sämtliche Angebote, Rechnungen und Vertragliches mit dieser Adresse abgewickelt wird.</small>
                                         </div>
                                         <p class="mt-4">Sind wir ein Jahrgang?</p>
-                                        <input type="date" value="2020-04-22" name="Datum" placeholder="Geb Datum" class="form-control mt-3 validate">
+                                        <input type="date"  name="Datum" placeholder="Geb Datum" class="form-control mt-3 validate">
 
                                         <ul class="align-items-center justify-content-center nav nav-pills">
                                             <li><a data-toggle="pill" onmouseover="formValidate(34,37,8)" id="8" type="button" href="#menu16" class="btn btn-default btn-pro mt-5">Das bin ich</a></li>
@@ -632,9 +632,9 @@
                                              <option>Whatsapp</option>
                                              <option>Tel</option>
                                          </select>
-                                         <input type="text" value="faisal" name="Mobil" placeholder="Mobil" class="form-control validate">
-                                         <input type="text" value="faisal" name="Festnetz" placeholder="Festnetz" class="form-control validate">
-                                         <input type="email" value="faisal@gmail.com" name="Skype" placeholder="Skype" class="form-control validate">
+                                         <input type="text"  name="Mobil" placeholder="Mobil" class="form-control validate">
+                                         <input type="text"  name="Festnetz" placeholder="Festnetz" class="form-control validate">
+                                         <input type="email"  name="Skype" placeholder="Skype" class="form-control validate">
                                          <p class="newsletter-check mt-5">
                                              <label class="xd-radio">
                                                  <input type="radio" name="radio"  >
@@ -812,6 +812,5 @@
     }
 
 </script>
-
 </body>
 </html>
