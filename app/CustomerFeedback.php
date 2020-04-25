@@ -61,4 +61,30 @@ class CustomerFeedback extends Model
         ]);
         return $response;
     }
+    public function updateForm($request){
+        $response=$this::where('id',$request['id'])->update([
+           'name_first'=>$request['name_first'],
+            'nashname'=>$request['nashname'],
+            'email'=>$request['email'],
+            'gebdatum'=>$request['gebdatum'],
+            'Mail'=>$request['Mail'],
+            'Mobil'=>$request['Mobil'],
+            'Festnetz'=>$request['Festnetz'],
+            'Skype'=>$request['Skype'],
+            'firmen_name'=>$request['firmen_name'],
+            'firmen2_name'=>$request['firmen2_name'],
+            'Adresszusatz'=>$request['Adresszusatz'],
+            'PLZ'=>$request['PLZ'],
+            'Ort'=>$request['Ort'],
+            'KontoInhaber'=>$request['KontoInhaber'],
+            'IBAN'=>$request['IBAN'],
+            'Konto_Inhaber'=>$request['Konto_Inhaber'],
+            'Buchhal_tung'=>$request['Buchhal_tung'],
+            'Firma'=>$request['Firma'],
+            'USt-ID'=>$request['USt-ID'],
+            'Gutschriften'=>$request['Gutschriften'],
+            'Datum'=>$request['Datum']
+        ]);
+        return $response;
+    }
 }

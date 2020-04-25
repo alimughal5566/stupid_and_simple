@@ -435,7 +435,7 @@
                                     <button class="btn btn-primary" type="submit">Logout</button>
                                 </form>
                                 @endauth
-                            </a>
+{{--                            </a>--}}
                         </li>
                     </ul>
                 </div>
@@ -667,27 +667,32 @@
                     </ul>
                 </div>
             </div>
-            <div class="breadcrumbs">
-                <ul>
-                    <li>
-                        <a href="more-login.html">Home</a>
-                        <i class="fa fa-angle-right"></i>
-                    </li>
-                    <li>
-                        <a href="layouts-sidebar-hidden.html">Layouts</a>
-                        <i class="fa fa-angle-right"></i>
-                    </li>
-                    <li>
-                        <a href="layouts-footer.html">Footer</a>
-                    </li>
-                </ul>
-                <div class="close-bread">
-                    <a href="#">
-                        <i class="fa fa-times"></i>
-                    </a>
-                </div>
-            </div>
+{{--            <div class="breadcrumbs">--}}
+{{--                <ul>--}}
+{{--                    <li>--}}
+{{--                        <a href="more-login.html">Home</a>--}}
+{{--                        <i class="fa fa-angle-right"></i>--}}
+{{--                    </li>--}}
+{{--                    <li>--}}
+{{--                        <a href="layouts-sidebar-hidden.html">Layouts</a>--}}
+{{--                        <i class="fa fa-angle-right"></i>--}}
+{{--                    </li>--}}
+{{--                    <li>--}}
+{{--                        <a href="layouts-footer.html">Footer</a>--}}
+{{--                    </li>--}}
+{{--                </ul>--}}
+{{--                <div class="close-bread">--}}
+{{--                    <a href="#">--}}
+{{--                        <i class="fa fa-times"></i>--}}
+{{--                    </a>--}}
+{{--                </div>--}}
+{{--            </div>--}}
             <div class="row">
+                <div class="col-md-12">
+                    @if(session()->has('success'))
+                    <div class="alert alert-success d-flex justify-content-center text-center w-50">{{session()->get('success')}}</div>
+                    @endif
+                </div>
                 <div class="col-sm-12">
                     <div class="box">
 {{--                        <div class="box-title">--}}
@@ -739,8 +744,8 @@
                                                 <td class="hidden-1024">{{$feed['IBAN']}}</td>
                                                 <td class="hidden-480">{{$feed['Datum']}}</td>
                                                 <td>
-                                                    <button class="view-data-btn" data-toggle="modal" data-target="#exampleModal" ><i class="fa fa-search"></i></button>
-                                                    <button data-original-title="Edit"><i class="fa fa-edit"></i></button>
+                                                    <button class="view-data-btn" data-placement="bottom" title="View" data-toggle="modal" data-target="#exampleModal" ><i class="fa fa-search"></i></button>
+                                                    <button class="edit-data-btn" data-placement="bottom" title="Edit" data-toggle="modal" data-target="#editModal"><i class="fa fa-edit"></i></button>
                                                 </td>
                                             </tr>
                                             @endforeach
@@ -774,6 +779,27 @@
                                     </div>
                                     <div class="modal-footer">
                                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+{{--                                        <button type="button" class="btn btn-primary">Save changes</button>--}}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    <!-- Edit Modal -->
+                        <div class="modal fade" id="editModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title text-uppercase" id="exampleModalLabel">update data</h5>
+{{--                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">--}}
+{{--                                            <span aria-hidden="true">&times;</span>--}}
+{{--                                        </button>--}}
+                                    </div>
+                                    <div class="modal-body" id="show-edit-form-modal">
+
+                                    </div>
+                                    <div class="modal-footer">
+{{--                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>--}}
 {{--                                        <button type="button" class="btn btn-primary">Save changes</button>--}}
                                     </div>
                                 </div>
@@ -927,7 +953,22 @@
             error:function (error) {
                 console.log(error);
             }
-        })
+        });
+    });
+    $('.edit-data-btn').on('click',function (e) {
+        e.preventDefault();
+        let id=$(this).parent().siblings()[0].innerHTML;
+        let url = 'edit-data-form'+'/'+id;
+        $.ajax({
+           url:url,
+           type:"get",
+           success:function (response) {
+                $('#show-edit-form-modal').html(response);
+           },
+           error:function (error) {
+                console.log(error);
+           }
+        });
     });
 </script>
 
