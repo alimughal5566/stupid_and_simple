@@ -548,22 +548,22 @@
                                 <table class="table text-left table-borderless data-check-table mt-5">
                                     <thead>
                                     <tr>
-                                        <th scope="col">Title</th>
-                                        <td>Input</td>
+                                        <th scope="col" id="title1">Title</th>
+                                        <td id="field1">Input</td>
                                     </tr>
                                     </thead>
                                     <tbody>
                                     <tr>
-                                        <th scope="row">Title</th>
-                                        <td>Input</td>
+                                        <th scope="row" id="title2">Title</th>
+                                        <td id="field2">Input</td>
                                     </tr>
                                     <tr>
-                                        <th scope="row">Title</th>
-                                        <td>Input</td>
+                                        <th scope="row" id="title3">Title</th>
+                                        <td id="field3">Input</td>
                                     </tr>
                                     <tr>
-                                        <th scope="row">Title</th>
-                                        <td>Input</td>
+                                        <th scope="row" id="title4">Title</th>
+                                        <td id="field4">Input</td>
                                     </tr>
                                     </tbody>
                                 </table>
@@ -814,7 +814,34 @@
         }
 
     }
-
+    let field1=$('input[name="name"]');
+    let field2 = $('inpuut[name="nashname"]');
+    let field3 = $('input[name="email"]');
+    let field4 = $('input[name="gebdatum"]');
+    field1.on('input',function () {
+        let val=$(this).val();
+        let attribute = $(this).attr('name');
+        $('#field1').text(val);
+        $('#title1').text(attribute);
+    });
+    field2.on('input',function () {
+        let val=$(this).val();
+        let attribute = $(this).attr('name');
+        $('#field2').text(val);
+        $('#title2').text(attribute);
+    });
+    field3.on('input',function () {
+        let val=$(this).val();
+        let attribute = $(this).attr('name');
+        $('#field3').text(val);
+        $('#title3').text(attribute);
+    });
+    field4.on('input',function () {
+        let val=$(this).val();
+        let attribute = $(this).attr('name');
+        $('#field4').text(val);
+        $('#title4').text(attribute);
+    });
 </script>
 </body>
 </html>
