@@ -46,6 +46,7 @@
                     Route::group(['AdmindashController'],function () {
 
                         Route::get('/admin-dash', 'AdmindashController@admindash')->name('admindash');
+                        Route::get('/view-data/{id}', 'AdmindashController@showData')->name('showData');
 
                     });
 

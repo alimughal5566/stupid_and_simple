@@ -1,4 +1,4 @@
- <!doctype>
+<!doctype>
 <html lang="en">
 <head>
     <meta charset="utf-8">
@@ -26,6 +26,11 @@
         <!-- inner-wrap -->
         <div class="inner-wrap text-center d-flex align-items-center justify-content-center">
             <div class="row">
+                <div class="col-md-12">
+                    @if(session()->has('success'))
+                        <div class="alert alert-success text-center">{{session()->get('success')}}</div>
+                    @endif
+                </div>
                 <div class="col col-md-12">
                     <h1 class="title-head">CHECK-IN</h1>
 
@@ -45,14 +50,14 @@
                         </ul>
 
                         <ul class="d-flex align-items-center justify-content-center nav nav-pills">
-                            <li><a data-toggle="pill" href="#menu9">9</a></li>
-                            <li><a data-toggle="pill" href="#menu10">10</a></li>
-                            <li><a data-toggle="pill" href="#menu11">11</a></li>
-                            <li><a data-toggle="pill" href="#menu12">12</a></li>
-                            <li><a data-toggle="pill" href="#menu13">13</a></li>
-                            <li><a data-toggle="pill" href="#menu14">14</a></li>
-                            <li><a data-toggle="pill" href="#menu15">15</a></li>
-                            <li><a data-toggle="pill" href="#menu16">16</a></li>
+                            <li><a data-toggle="pill" class="d-none" href="#menu9">9</a></li>
+                            <li><a data-toggle="pill" class="d-none" href="#menu10">10</a></li>
+                            <li><a data-toggle="pill" class="d-none" href="#menu11">11</a></li>
+                            <li><a data-toggle="pill" class="d-none" href="#menu12">12</a></li>
+                            <li><a data-toggle="pill" class="d-none" href="#menu13">13</a></li>
+                            <li><a data-toggle="pill" class="d-none" href="#menu14">14</a></li>
+                            <li><a data-toggle="pill" class="d-none" href="#menu15">15</a></li>
+                            <li><a data-toggle="pill" class="d-none" href="#menu16">16</a></li>
                         </ul>
                     </div>
                     <form action="{{route('getData')}}" method="post" enctype="multipart/form-data">
@@ -118,7 +123,6 @@
                                         <ul class="align-items-center justify-content-center nav nav-pills">
                                             <li><a data-toggle="pill" onmouseover="formValidate(0 , 4 , 1 )" id="1" href="#menu3"  class="btn btn-default btn-pro mt-5 get" >Das bin ich</a></li>
                                         </ul>
-
 {{--                                        <button type="submit"  class="btn btn-default btn-pro mt-5">Das bin ich</button>--}}
                                 </div>
                             </div>
