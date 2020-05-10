@@ -39,6 +39,6 @@ class FrontendController extends Controller
 
     public function getData(Request $request){
         $this->customerFeedback->insertData($request);
-        return redirect()->back()->with('success','Data inserted successfully');
+        return view('layouts.frontend.pages.success')->with('success','Data inserted successfully');
     }
 }

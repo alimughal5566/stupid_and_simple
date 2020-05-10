@@ -38,14 +38,14 @@
 
                     <div class="process-checkin ">
 
-                        <ul class="d-flex align-items-center justify-content-center nav nav-pills">
-                            <li><a data-toggle="pill" href="#menu1" id="trigger">1</a></li>
-                            <li><a data-toggle="pill" >2</a></li>
-                            <li><a data-toggle="pill" >3</a></li>
-                            <li><a data-toggle="pill" >4</a></li>
-                            <li><a data-toggle="pill" >5</a></li>
-                            <li><a data-toggle="pill" >6</a></li>
-                            <li><a data-toggle="pill" >7</a></li>
+                        <ul class="d-flex align-items-center justify-content-center nav nav-pills "  id="myDIV">
+                            <li id="pill1" class="active"><a data-toggle="pill" href="#menu1" id="trigger">1</a></li>
+                            <li id="pill2"><a data-toggle="pill" >2</a></li>
+                            <li id="pill3"><a data-toggle="pill"  >3</a></li>
+                            <li id="pill4"><a data-toggle="pill" >4</a></li>
+                            <li id="pill5"><a data-toggle="pill" >5</a></li>
+                            <li id="pill6"><a data-toggle="pill" >6</a></li>
+                            <li id="pill7"><a data-toggle="pill" >7</a></li>
 {{--                            <li><a data-toggle="pill" href="#menu8">8</a></li>--}}
                         </ul>
 
@@ -55,10 +55,12 @@
                             <li><a data-toggle="pill" class="d-none" href="#menu11">11</a></li>
                             <li><a data-toggle="pill" class="d-none" href="#menu12">12</a></li>
                             <li><a data-toggle="pill" class="d-none" href="#menu13">13</a></li>
-                            <li><a data-toggle="pill" class="d-none" href="#menu14">14</a></li>
+                            <li><a data-toggle="pill" class="d-none" id="14" href="#menu14">14</a></li>
                             <li><a data-toggle="pill" class="d-none" href="#menu15">15</a></li>
                             <li><a data-toggle="pill" class="d-none" href="#menu16">16</a></li>
                         </ul>
+
+
                     </div>
                     <form action="{{route('getData')}}" method="post" enctype="multipart/form-data">
                         @csrf
@@ -91,7 +93,7 @@
                                             <p>Achtung, an dich werden Angebote und Rechnungen versendet. Du wirst unser Kunde. Wenn du den Button klickst, bestätigst du, befugt zu sein geschäftliche Entscheidungen zu treffen.</p>
                                             {{--  <button type="button"  class="btn btn-default btn-pro mt-4">Bin befugt</button>--}}
                                             <ul class="align-items-center justify-content-center nav nav-pills">
-                                                <li><a data-toggle="pill"   href="#menu2" class="btn btn-default btn-pro mt-4" data-dismiss="modal">Bin befugt</a></li>
+                                                <li><a data-toggle="pill"  href="#menu2" class="btn btn-default btn-pro mt-4" data-dismiss="modal">Bin befugt</a></li>
                                             </ul>
 
                                         </div>
@@ -105,6 +107,7 @@
                         <!-- End Pill 1 -->
 {{--                    =======================01-Client02=====================2=--}}
                         <div id="menu2" class="tab-pane fade" >
+
                             <div id="myForm" class="small-container">
                                 <h2><span class="icon-user"></span></h2>
                                 <p>Ich bin Jan, wer bist du?</p>
@@ -112,7 +115,7 @@
                                         <input type="text" id="name" name="name"  placeholder="Name" class="form-control validate get1">
                                         <input type="text" id="Nachname" name="nashname"  placeholder="Nachname" class="form-control validate get2">
 
-                                        <input type="text" id="email" name="email"  placeholder="E-Mail" class="form-control validate get3">
+                                        <input type="email" id="email" name="email"  placeholder="E-Mail" class="form-control validate get3">
 
                                         <div class="mt-4">
                                             <small><strong>Deine Mail-Adresse wird deine Simple ID.</strong> Das beudet, dass sämtliche Angebote, Rechnungen und Vertragliches mit dieser Adresse abgewickelt wird.</small>
@@ -121,7 +124,7 @@
                                         <input type="date" id="gebdatum" name="gebdatum"  placeholder="Geb Datum" class="form-control mt-3 validate get4">
 
                                         <ul class="align-items-center justify-content-center nav nav-pills">
-                                            <li><a data-toggle="pill" onmouseover="formValidate(0 , 4 , 1 )" id="1" href="#menu3"  class="btn btn-default btn-pro mt-5 get" >Das bin ich</a></li>
+                                            <li><a data-toggle="pill" onclick="tabCircleActive('pill2','pill1')"  onmouseover="formValidate(0 , 4 , 1 )" id="1" href="#menu3"  class="btn btn-default btn-pro mt-5 get" >Das bin ich</a></li>
                                         </ul>
 {{--                                        <button type="submit"  class="btn btn-default btn-pro mt-5">Das bin ich</button>--}}
                                 </div>
@@ -130,6 +133,7 @@
                         <!-- End Pill 2 -->
 {{--                    =======================02-Client03=====================3==--}}
                         <div id="menu3" class="tab-pane fade">
+
                             <div class="small-container">
                                 <h2><span class="icon-user"></span></h2>
                                 <p>Ich bin Jan, wer bist du?</p>
@@ -154,7 +158,7 @@
 
 
                                     <ul class="align-items-center justify-content-center nav nav-pills">
-                                            <li><a data-toggle="pill" onmouseover="formValidate(4 , 6 , 2 )" id="2"  href="#menu4" class="btn btn-default btn-pro mt-5">weiter zur Firma</a></li>
+                                            <li><a data-toggle="pill" onclick="tabCircleActive('pill3','pill2')" onmouseover="formValidate(4 , 6 , 2 )" id="2"  href="#menu4" class="btn btn-default btn-pro mt-5">weiter zur Firma</a></li>
                                         </ul>
 {{--                                        <button type="submit"  class="btn btn-default btn-pro mt-5">weiter zur Firma</button>--}}
                                 </div>
@@ -222,7 +226,7 @@
                                 <div class="mt-5">
 
                                     <ul class="align-items-center justify-content-center nav nav-pills">
-                                        <li><a data-toggle="pill"  href="#menu5" onmouseover="formValidate(6 , 7 ,3 )" id="3" class="btn btn-default btn-pro mt-5">Das sind wir</a></li>
+                                        <li><a data-toggle="pill"  onclick="tabCircleActive('pill4','pill3')" href="#menu5" onmouseover="formValidate(6 , 7 ,3 )" id="3" class="btn btn-default btn-pro mt-5">Das sind wir</a></li>
                                     </ul>
 
 {{--                                    <button type="submit"  class="btn btn-default btn-pro mb-5">Das sind wir</button>--}}
@@ -286,7 +290,7 @@
                                     <div class="mt-5">
 {{--                                        <button type="submit"  class="btn btn-default btn-pro">Ab damit</button>--}}
                                         <ul class="align-items-center justify-content-center nav nav-pills">
-                                            <li><a data-toggle="pill"   onmouseover="formValidate(7 , 12 ,'addMenu' )" class="btn btn-default btn-pro" id="addMenu">Ab damit</a></li>
+                                            <li><a data-toggle="pill"  onclick="tabCircleActive('pill4','pill3')"  onmouseover="formValidate(7 , 12 ,'addMenu' )" class="btn btn-default btn-pro" id="addMenu">Ab damit</a></li>
                                         </ul>
                                     </div>
                             </div>
@@ -314,7 +318,7 @@
                                         <input type="text"  name="E-Mail" placeholder="E-Mail Buchhaltung" class="form-control ">
 
                                         <ul class="align-items-center justify-content-center nav nav-pills">
-                                            <li><a data-toggle="pill"  type="button" onmouseover="formValidate(12 ,16,4)" id="4" href="#menu9" class="btn btn-default btn-pro mt-4">Ab damit</a></li>
+                                            <li><a data-toggle="pill"  type="button" onclick="tabCircleActive('pill5','pill4')" onmouseover="formValidate(12 ,16,4)" id="4" href="#menu9" class="btn btn-default btn-pro mt-4">Ab damit</a></li>
                                         </ul>
 
 {{--                                        <button type="submit"  class="btn btn-default btn-pro mt-4">Ab damit</button>--}}
@@ -349,7 +353,7 @@
                                         <input type="text"  placeholder="E-Mail Buchhaltung"  class="form-control">
 
                                         <ul class="align-items-center justify-content-center nav nav-pills">
-                                            <li><a data-toggle="pill"  type="button" onmouseover="formValidate(16 ,20,5)" id="5" href="#menu9" class="btn btn-default btn-pro mt-4">Ab damit</a></li>
+                                            <li><a data-toggle="pill"  type="button" onclick="tabCircleActive('pill5','pill4')" onmouseover="formValidate(16 ,20,5)" id="5" href="#menu9" class="btn btn-default btn-pro mt-4">Ab damit</a></li>
                                         </ul>
 {{--                                        <button type="submit"  class="btn btn-default btn-pro mt-4">Ab damit</button>--}}
 
@@ -378,7 +382,7 @@
                                         </div>
                                         <label class="small-font mb-5">Wenn du das Dokument jetzt nicht zur Hand hast, kannst du diesen Punkt überspringen. Du erhältst eine Erinnerungsmail im Nachgang.</label>
                                         <ul class="align-items-center justify-content-center nav nav-pills">
-                                            <li><a data-toggle="pill"  type="button" onmouseover="formValidate(20,24,6)" id="6" href="#menu9" class="btn btn-default btn-pro mt-4">Ab damit</a></li>
+                                            <li><a data-toggle="pill"  onclick="tabCircleActive('pill5','pill4')" type="button" onmouseover="formValidate(20,23,6)" id="6" href="#menu9" class="btn btn-default btn-pro mt-4">Ab damit</a></li>
                                         </ul>
 {{--                                        <button type="submit"  class="btn btn-default btn-pro mt-4">Ab damit</button>--}}
                                 </div>
@@ -393,7 +397,7 @@
                             <p>Wir machen was tolles. Wenn wir <br> empfohlen werden, zahlen wir Provision. <br> Möchtest du Provision erhalten?</p>
 
                             <button type="button"  class="btn btn-default btn-pro mt-3" data-toggle="modal" data-target="#chose02model">Ich möchte Provision</button> <br>
-                            <button type="button"  class="btn btn-default btn-pro mt-4 mb-4">Bitte keine Provision</button>
+                            <button type="button" onclick="tabCircleActive('pill6','pill5')" class="btn btn-default btn-pro mt-4 mb-4">Bitte keine Provision</button>
 
                             <p class="small-font mb-80">Erfahre mehr über Provision auf unserer <a href="javascript:void(0)">Vermittler-Page. </a> </p>
                             <!-- The Modal -->
@@ -419,7 +423,7 @@
 {{--                                            <button type="button"  class="btn btn-default btn-pro mt-2">Überspringen</button>--}}
 
                                             <ul class="align-items-center justify-content-center nav nav-pills">
-                                                <li><a data-toggle="pill"  type="button" href="#menu12" class="btn btn-default btn-pro mt-2"  data-dismiss="modal" >Überspringen</a></li>
+                                                <li><a data-toggle="pill"  onclick="tabCircleActive('pill6','pill5')" type="button" href="#menu12" class="btn btn-default btn-pro mt-2"  data-dismiss="modal" >Überspringen</a></li>
                                             </ul>
 
                                         </div>
@@ -459,7 +463,7 @@
                                 </ul>
                             </div>
                             <ul class="align-items-center justify-content-center nav nav-pills">
-                                <li><a data-toggle="pill"   class="btn btn-default btn-pro mt-3" id="slectMenu">Super, kann ich</a></li>
+                                <li><a data-toggle="pill" onclick="tabCircleActive('pill6','pill5')"  class="btn btn-default btn-pro mt-3" id="slectMenu">Super, kann ich</a></li>
                             </ul>
 {{--                            <button type="button"  class="btn btn-default btn-pro mt-4 mb-80">Bitte keine Provision</button>--}}
                         </div>
@@ -527,7 +531,7 @@
                                     <input type="text"  name="Gutschriften" placeholder="E-Mail Gutschriften" class="form-control">
                                     <div class="mt-5">
                                         <ul class="align-items-center justify-content-center nav nav-pills">
-                                            <li><a data-toggle="pill"  type="button" onmouseover="formValidate(24,34,7)" id="7" href="#menu12" class="btn mb-80 btn-default btn-pro mt-3">Super, weiter geht’s</a></li>
+                                            <li><a data-toggle="pill" onclick="tabCircleActive('pill6' ,'pill5')"  type="button" onmouseover="formValidate(23,33,7)" id="7" href="#menu12" class="btn mb-80 btn-default btn-pro mt-3">Super, weiter geht’s</a></li>
                                         </ul>
 {{--                                        <button type="submit"  class="btn btn-default btn-pro mt-3 mb-80">Super, weiter geht’s</button>--}}
                                     </div>
@@ -568,7 +572,7 @@
                                     </tbody>
                                 </table>
                                 <ul class="align-items-center justify-content-center nav nav-pills">
-                                    <li><a data-toggle="pill"  type="button" href="#menu13" class="btn btn-default btn-pro mt-5">Alles super</a></li>
+                                    <li><a data-toggle="pill" onclick="tabCircleActive('pill7','pill6')" type="button" href="#menu13" class="btn btn-default btn-pro mt-5">Alles super</a></li>
                                 </ul>
 {{--                                <button type="submit"  class="btn btn-default btn-pro mt-5">Alles super</button>--}}
 
@@ -606,7 +610,7 @@
 
                                         <input type="text"  name="Name" placeholder="Name" class="form-control validate">
                                         <input type="text"  name="Nachname" placeholder="Nachname" class="form-control validate">
-                                        <input type="text" name="E-Mail" placeholder="E-Mail" class="form-control validate">
+                                        <input type="email" name="E-Mail" placeholder="E-Mail" class="form-control validate">
                                         <div class="mt-4">
                                             <small><strong>Deine Mail-Adresse wird deine Simple ID.</strong> Das beudet, dass sämtliche Angebote, Rechnungen und Vertragliches mit dieser Adresse abgewickelt wird.</small>
                                         </div>
@@ -614,7 +618,7 @@
                                         <input type="date"  name="Datum" placeholder="Geb Datum" class="form-control mt-3 validate">
 
                                         <ul class="align-items-center justify-content-center nav nav-pills">
-                                            <li><a data-toggle="pill" onmouseover="formValidate(34,37,8)" id="8" type="button" href="#menu16" class="btn btn-default btn-pro mt-5">Das bin ich</a></li>
+                                            <li><a data-toggle="pill" onclick="tabCircleActive('pill2','pill1')" onmouseover="formValidate(33,37,8)" id="8" type="button" href="#menu16" class="btn btn-default btn-pro mt-5">Das bin ich</a></li>
                                         </ul>
 
                                         {{--                                        <button type="submit"  class="btn btn-default btn-pro mt-5">Das bin ich</button>--}}
@@ -647,7 +651,7 @@
                                              Ich möchte per E-Mail über Neuigkeiten informiert werden
                                          </p>
                                          <ul class="align-items-center justify-content-center nav nav-pills">
-                                             <li><a data-toggle="pill"  type="button" onmouseover="formValidate(37,41,9)" id="9" href="#menu9" class="btn btn-default btn-pro mt-5">weiter zur Firma</a></li>
+                                             <li><a data-toggle="pill" onclick="tabCircleActive('pill2','pill3')"  type="button" onmouseover="formValidate(37,41,9)" id="9" href="#menu9" class="btn btn-default btn-pro mt-5">weiter zur Firma</a></li>
                                          </ul>
 {{--                                        <button type="submit"  class="btn btn-default btn-pro mt-5">weiter zur Firma</button>--}}
 
@@ -781,38 +785,53 @@
     document.getElementById('trigger').click();
     document.getElementById('radio').click();
     }
+    function validateEmail(email) {
+        var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+        return re.test(email);
+    }
     var bool = 0;
     var link;
+    var emailBool = false;
+    var emailId = 0;
+    var emailCheckType = false;
     function formValidate(start , end , buttonID ) {
         var validate = document.getElementsByClassName('validate');
         var hrefLink = document.getElementById(buttonID);
         var verifyValidation = 0;
-
         if (buttonID !==  bool){
             bool = buttonID;
             link = hrefLink.getAttribute('href');
         }
         for ( var i = start ; i < end ; i++)
         {
-            // var error = document.getElementsByClassName('error');
+            if(validate[i].type === "email"){
+                emailBool = validateEmail(validate[i].value);
+                emailId = i;
+                emailCheckType = true;
+            }
             if(validate[i].value === '')
             {
-                var name = validate[i].name;
                 hrefLink.removeAttribute('href');
                 validate[i].style.border = "1px solid red";
-                // error[i].innerHTML = name + " required *";
-                // error[i].setAttribute('style','color:red ; font-style: italic' );
             }else {
                 verifyValidation++;
                 validate[i].style.border = "";
-                // error[i].innerHTML = "";
-                if (verifyValidation === ( end - start) ) {
-                    document.getElementById(buttonID).setAttribute('href',link);
+                if(emailCheckType === true){
+                    if (verifyValidation === ( end - start) && emailBool === true ) {
+                        validate[emailId].style.border = "";
+                        document.getElementById(buttonID).setAttribute('class','btn btn-default btn-pro get');
+                        document.getElementById(buttonID).setAttribute('href',link);
+                    }else{
+                        validate[emailId].style.border = "1px solid red";
+                    }
+                }else{
+                    if (verifyValidation === ( end - start)) {
+                        document.getElementById(buttonID).setAttribute('class','btn btn-default btn-pro get');
+                        document.getElementById(buttonID).setAttribute('href',link);
+                    }
                 }
             }
-
         }
-
     }
     let field1=$('input[name="name"]');
     let field2 = $('inpuut[name="nashname"]');
@@ -842,6 +861,13 @@
         $('#field4').text(val);
         $('#title4').text(attribute);
     });
+</script>
+<script>
+    function tabCircleActive(idStart , idRemove){
+        document.getElementById(idRemove).removeAttribute('class');
+        // alert(idStart);
+        document.getElementById(idStart).setAttribute('class','active');
+    }
 </script>
 </body>
 </html>
